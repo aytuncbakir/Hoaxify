@@ -1,0 +1,31 @@
+
+spring:
+  profiles:
+    active:
+    - dev
+  
+    
+hoaxify:
+  upload-path: picture-store 
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+hoaxify:
+  upload-path: storage-prod 
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  servlet:
+    multipart:
+      max-file-size: 10MB
+        
+hoaxify:
+  upload-path: storage-dev
+  
+  
+  
+  
